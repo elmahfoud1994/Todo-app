@@ -23,7 +23,9 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context:  ./todo-front
           file: ./todo-front/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/todo-front:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/todo-front:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/todo-front:buildcache,mode=max
