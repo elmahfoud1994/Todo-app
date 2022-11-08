@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context:  ./todo-back
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64v8
           file: ./todo-front/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/todo-back-dev:latest
