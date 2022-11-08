@@ -1,4 +1,4 @@
-ARG version="19.0.0"
+ARG version="lts-slim"
 FROM node:$version
 LABEL author="El Mahfoud BOUATIM"
 LABEL commpany="BeTech" 
