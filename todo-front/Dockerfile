@@ -1,4 +1,4 @@
-ARG version="lts-slim"
+ARG version="lts-alpine3.16"
 FROM node:$version AS BUILD 
 LABEL author="EL Mahfoud BOUATIM"
 LABEL company="BeTech"
